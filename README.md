@@ -43,7 +43,7 @@ moved creation, reads, revocation, deletion, and authentication into sqlite, rep
 ### phase 8: concurrency and robustness
 covered request-body limits, strict json, consistent http errors/method handling, and server timeouts. also restricted the database pool to one connection. the stricter input checks currently apply to key creation, not echo.
 
-### phase 9: automated testing, incomplete
+### phase 9: automated testing (incomplete)
 started with small tests to check that missing credentials are rejected, valid admin credentials are accepted, and ordinary keys cannot get admin access. these checks use test-only requests and storage, so they do not depend on real credentials.
 
 stopped after four tests rather than completing the entire testing phase. full key-lifecycle, persistence, and concurrent-request tests are still unfinished. passing these small tests should not be confused with verifying the whole application.
